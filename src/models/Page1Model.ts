@@ -1,7 +1,21 @@
-class Page1Model {
-  #remoteData;
+export interface remoteData {
+  duration: string;
+  airline: string;
+  time: string;
+  stoppage: string;
+  cost: string;
+}
 
-  constructor(remoteData) {
+class Page1Model {
+  #remoteData : remoteData;
+
+  constructor(remoteData = {
+    duration: '',
+    airline: '',
+    time: '',
+    stoppage: '',
+    cost: ''
+  }) {
     this.#remoteData = remoteData;
   }
 
@@ -9,7 +23,7 @@ class Page1Model {
     return this.#remoteData.duration;
   }
 
-  setDuration(value) {
+  setDuration(value : string) {
     this.#remoteData.duration = value;
   }
 
@@ -17,7 +31,7 @@ class Page1Model {
     return this.#remoteData.airline;
   }
 
-  setAirline(value) {
+  setAirline(value : string) {
     this.#remoteData.airline = value;
   }
 
@@ -25,7 +39,7 @@ class Page1Model {
     return this.#remoteData.time;
   }
 
-  setTime(value) {
+  setTime(value : string) {
     this.#remoteData.time = value;
   }
 
@@ -33,7 +47,7 @@ class Page1Model {
     return this.#remoteData.stoppage;
   }
 
-  setStoppage(value) {
+  setStoppage(value : string) {
     this.#remoteData.stoppage = value;
   }
 
@@ -41,7 +55,7 @@ class Page1Model {
     return this.#remoteData.cost;
   }
 
-  setCost(value) {
+  setCost(value : string) {
     this.#remoteData.cost = value;
   }
 

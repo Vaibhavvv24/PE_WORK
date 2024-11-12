@@ -1,10 +1,12 @@
 
 import { useEffect, useState } from 'react';
 import Page1Model from '../models/Page1Model';
+import { remoteData } from '../models/Page1Model';
+
 
 const usePage1Hook = () => {
 
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Page1Model[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,7 +17,7 @@ const usePage1Hook = () => {
         }
       }).then(response => response.json())
 
-      const modelInstances = data1.map(item => new Page1Model(item));
+      const modelInstances = data1.map((data : remoteData) => new Page1Model(data));
       setData(modelInstances);
     }
     
