@@ -16,6 +16,6 @@ function App() {
       <Route path='/api-example' element={<ApiExample />} />
     </Routes>
   );
-}
+};
 
 export default App;

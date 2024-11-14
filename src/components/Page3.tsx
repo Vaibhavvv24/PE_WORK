@@ -1,8 +1,9 @@
 /** @format */
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Page3.css";
-export default function Page3() {
+
+const Page3: React.FC = () => {
   return (
     <>
       <div>
@@ -15,3 +16,5 @@ export default function Page3() {
     </>
   );
 }
+
+export default Page3;
